@@ -1,4 +1,4 @@
-# ds-learning on SkilFactory
+# ds-learning on SkillFactory
 SF homework (Data Science)
 ## game random number
 
