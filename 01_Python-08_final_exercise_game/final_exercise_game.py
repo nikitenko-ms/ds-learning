@@ -39,7 +39,7 @@ def random_predict(number:int=1) -> int:
                     break
         
         else:
-            if number < 85:
+            if 70 <= number < 85:
                 predict_number = np.random.randint(70, 85) 
                 if predict_number == number:
                     break
