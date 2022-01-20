@@ -14,39 +14,20 @@ def random_predict(number:int=1) -> int:
         int: число попыток
     """
     count = 0 # задаем счетчик количества попыток
-
-    while True: # создаем цикл для угадывания
+    min_number = 1 # задаем нижнюю возможную границу поиска
+    max_number = 100 # задаем верхнюю возможную границу поиска
+    
+    while min_number < max_number: # создаем цикл для угадывания
         count += 1 # каждая попытка увеличивает счетчик на 1
+        predict_number = np.random.randint(min_number, max_number + 1)  # предполагаемое число внутри заданных границ
+        middle_number = (min_number + max_number) // 2 # задаем середину диапазон
         
-        if number < 35: # с помощью условий тут и далее в цикле создаем "воронку" для сокращения количества попыток
-            if number < 18:
-                predict_number = np.random.randint(1, 18) # компьютер предлагает число 
-                if predict_number == number: # если число верное, то происходит выход из цикла
-                    break
-            else:
-                predict_number = np.random.randint(18, 35)
-                if predict_number == number:
-                    break
-        
-        elif 35 <= number < 70:
-            if number < 53:
-                predict_number = np.random.randint(35, 53) 
-                if predict_number == number:
-                    break
-            else:
-                predict_number = np.random.randint(53, 70) 
-                if predict_number == number:
-                    break
-        
-        else:
-            if 70 <= number < 85:
-                predict_number = np.random.randint(70, 85) 
-                if predict_number == number:
-                    break
-            else:
-                predict_number = np.random.randint(85, 101) 
-                if predict_number == number:
-                    break
+        if predict_number == number:   # если угадали число, 
+            break                      # то выходим из цикла
+        elif number > middle_number:   # если загаданное число в диапазоне выше середины,
+            min_number = middle_number # то сдвигаем нижнюю границу к середине        
+        else:                          # если загаданное числло в диапазоне ниже середины.
+            max_number = middle_number # то сдвигаем верхнюю границу к середине 
     
     return count # функция возвращает количество попыток
 
