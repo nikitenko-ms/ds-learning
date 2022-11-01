@@ -3,10 +3,10 @@ SF_Project-01/data/dst-3.0_16_1_hh_database.csv
 SF_Project-03_EDA_Feature_Engineering/data/hotels_test.csv
 SF_Project-03_EDA_Feature_Engineering/data/hotels_train.csv
 
-#SF_Project-05_ML_Regression/data/osrm_data_train.csv
-#SF_Project-05_ML_Regression/data/Project5_osrm_data_test.csv
-#SF_Project-05_ML_Regression/data/train.csv
-#SF_Project-05_ML_Regression/data/Project5_test_data.csv
+SF_Project-05_ML_Regression/data/osrm_data_train.csv
+SF_Project-05_ML_Regression/data/Project5_osrm_data_test.csv
+SF_Project-05_ML_Regression/data/train.csv
+SF_Project-05_ML_Regression/data/Project5_test_data.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
