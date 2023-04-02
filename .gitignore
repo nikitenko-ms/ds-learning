@@ -8,6 +8,8 @@ SF_Project-05_ML_Regression/data/Project5_osrm_data_test.csv
 SF_Project-05_ML_Regression/data/train.csv
 SF_Project-05_ML_Regression/data/Project5_test_data.csv
 
+SF_FinalExam/data/train.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
